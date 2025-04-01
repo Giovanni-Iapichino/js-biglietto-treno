@@ -17,16 +17,25 @@ console.log("km", km);
 const ticketFullPrice = km * price;
 console.log("ticketFullPrice", ticketFullPrice);
 let ticketFinalPrice;
+let outputText;
 
 //SVOLGIMENTO
-if (age < 18) {
-  ticketFinalPrice = ((ticketFullPrice * 20) / 100).toFixed(2);
-} else if (age > 65) {
-  ticketFinalPrice = ((ticketFullPrice * 60) / 100).toFixed(2);
-} else {
-  ticketFinalPrice = ticketFullPrice.toFixed(2);
-}
+if (!isNaN(age) && !isNaN(km)) {
+  if (age < 18) {
+    ticketFinalPrice = (ticketFullPrice - (ticketFullPrice * 20) / 100).toFixed(
+      2
+    );
+  } else if (age > 65) {
+    ticketFinalPrice = (ticketFullPrice - (ticketFullPrice * 40) / 100).toFixed(
+      2
+    );
+  } else {
+    ticketFinalPrice = ticketFullPrice.toFixed(2);
+  }
 
-// OUTPUT
-console.log("ticketFinalPrice", ticketFinalPrice);
-alert("Dovrai pagare " + ticketFinalPrice + "€");
+  console.log("ticketFinalPrice", ticketFinalPrice);
+  alert("Dovrai pagare " + ticketFinalPrice + "€");
+} else {
+  outputText = "Attenzione, i valori inseriti non sono validi!";
+  alert(outputText);
+}
