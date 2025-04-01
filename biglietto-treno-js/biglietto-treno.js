@@ -32,7 +32,6 @@ if (!isNaN(age) && !isNaN(km)) {
   } else {
     ticketFinalPrice = ticketFullPrice.toFixed(2);
   }
-
   console.log("ticketFinalPrice", ticketFinalPrice);
   alert("Dovrai pagare " + ticketFinalPrice + "€");
 } else {
