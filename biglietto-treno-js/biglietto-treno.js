@@ -27,5 +27,5 @@ if (age < 18) {
   ticketFinalPrice = ticketFullPrice.toFixed(2);
 }
 
-console.log("ticketFinalPrice", "Dovrai pagare " + ticketFinalPrice);
+console.log("ticketFinalPrice", ticketFinalPrice);
 alert("Dovrai pagare " + ticketFinalPrice + "€");
